@@ -1,8 +1,10 @@
-"use client";
+import { Button } from "./_components/ui/button"
 
 const page = () => {
   return (
-    <div>page</div>
+    <div className="bg-red-500">
+    <Button>TESTE BUTTON</Button>
+    </div>
   )
 }
 
