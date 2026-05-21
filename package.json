@@ -6,7 +6,7 @@
     "plugins": [
       "prettier-plugin-tailwindcss"
     ],
-    "tabWidth": 2,
+    "tabWidth": 4,
     "semi": false
   },
   "scripts": {
@@ -34,6 +34,8 @@
     "eslint": "^8",
     "eslint-config-next": "14.2.35",
     "postcss": "^8",
+    "prettier": "^3.8.3",
+    "prettier-plugin-tailwindcss": "^0.8.0",
     "prisma": "^7.8.0",
     "tailwindcss": "^3.4.1",
     "ts-node": "^10.9.2",
