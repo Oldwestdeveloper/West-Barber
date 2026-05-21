@@ -1,6 +1,17 @@
-const { PrismaClient } = require("@prisma/client");
+import "dotenv/config";
+import { PrismaClient } from "@prisma/client";
+import { Pool } from "pg";
+import { PrismaPg } from "@prisma/adapter-pg";
 
-const prisma = new PrismaClient();
+// Puxa a URL do banco do .env
+const connectionString = process.env.DATABASE_URL;
+
+// Cria a pool de conexão e o adaptador
+const pool = new Pool({ connectionString });
+const adapter = new PrismaPg(pool);
+
+// Inicializa o PrismaClient passando o adaptador (exigência do Prisma 7)
+const prisma = new PrismaClient({ adapter });
 
 async function seedDatabase() {
   try {
