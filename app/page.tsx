@@ -1,9 +1,12 @@
-import { Button } from "./_components/ui/button"
-
-const name = "test"
+import Header from "./_components/Header"
 
 const page = () => {
-    return                     <Button>teste</Button>
+  return (
+    <div>
+      {/* header */}
+      <Header />
+    </div>
+  )
 }
 
 export default page
